@@ -14,7 +14,7 @@ class _Commands:
 
     @classmethod
     def register(cls, name, func, helper):
-        cls.cmds[name] = _C(func, helper)
+        cls._cmds[name] = _C(func, helper)
 
     @classmethod
     def all(cls):

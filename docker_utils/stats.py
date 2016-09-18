@@ -5,7 +5,7 @@ from docker import Client
 from tabulate import tabulate
 
 import docker_utils
-from docker_utils.utils import clear, unit
+from docker_utils.utils import unit
 
 
 class _ORDER:
@@ -48,7 +48,6 @@ class Stats:
 
         # clean console
         time.sleep(1)
-        clear()
 
     def _sort(self, data, order_by):
         if order_by == _ORDER.MEM:
