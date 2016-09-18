@@ -73,7 +73,7 @@ class Stats:
         return data
 
     def _show_resource_usage(self, order_by, *containers):
-        _cs = containers or [x['Id'][:12] for x in self._get_all_running_containers()]
+        _cs = containers or [x['Names'][0] for x in self._get_all_running_containers()]
 
         stats_generators = {}
         for c in _cs:
